@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320">
+	<path id="background" ng-attr-d="{{background}}" stroke-width="25" stroke="#ddd" fill="none"/>
+	<path ng-attr-d="{{value}}" style="{{dashArray}}" stroke-width="25" stroke="#ff0000" fill="none"/>
+	<path id="gradients" ng-attr-d="{{gradients}}" stroke-width="0" fill="none"/>
+	<text ng-repeat="grad in specs.gradients" dx="0" dy="-10" text-anchor="middle" style="font: bold large arial">
+		<textPath xlink:href="#gradients" startOffset="{{grad.offset}}" fill="#666">
+			{{grad.value}}
+		</textPath>
+	</text>
+	<text 
+		fill="#666"
+		dx="0"
+		dy="-10"
+		ng-attr-x="{{maxValueCoordinates.x}}" ng-attr-y="{{maxValueCoordinates.y}}" 
+		text-anchor="middle" style="font: bold large arial;" 
+		ng-attr-transform="rotate( 90,{{maxValueCoordinates.x}},{{maxValueCoordinates.y}})">
+		{{specs.maxValue}}
+	</text>
+</svg>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ngCharts</title>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="ngChars for Angular">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>   
+        <script src="./ngCharts/pie.js"></script>
+        <script src="./ngCharts/bar.js"></script>
+        <script src="./ngCharts/gauge.js"></script>
+        <script src="./ngCharts/main.js"></script> 
+        
+        <style type="text/css">
+        .ngChart {
+            display: block;
+        }
+        .center-align {
+            text-align: center;
+        }
+        container {
+            width: 1000px;
+        }
+        .ngCharts {
+            background: #fff;
+            font-family: 'Open Sans',Arial,Helvetica;
+            font-size: 12px;
+        }
+        svg .ngChart {
+        }
+        #bar text {
+            padding-right: 20px;
+            white-space: nowrap;
+        }
+        </style>
+    </head>
+    <body ng-app="ngCharts">
+        <div class="container" ng-controller="ngChartsCtrl">
+            <div class=row>
+                <div class="col-lg-6 center-align">
+                    <pie id="pie1" class="ngCharts" specs="pie1"></pie>
+                    <bar id="bar1" class="ngCharts" specs="bar1"></bar>
+                    <gauge id="gauge1" class="ngCharts" specs="gauge1"></gauge>
+                </div>
+                <div class="col-lg-6 center-align">
+                    <pie id="pie2" class="ngCharts" specs="pie2"></pie>
+                    <bar id="bar2" class="ngCharts" specs="bar2"></bar>
+                    <gauge id="gauge2" class="ngCharts" specs="gauge2"></gauge>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="250">
+	<rect ng-repeat="bar in specs.bars" id="{{bar.id}}" style="{{bar.animationParameters}}" 
+			x="20" ng-attr-y="{{20 * $index}}" fill="{{bar.color}}" ng-attr-width="{{bar.width}}" height="20"/>		
+</svg>
